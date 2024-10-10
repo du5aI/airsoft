@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+header {
+    background-color: #2b2b2b;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url("hero-banner-1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.auth-buttons {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+}
+
+.center-button {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ff9800; /* Цвет кнопок аренды и полигонов */
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto; /* Центровка кнопок */
+    border-radius: 5px;
+    display: inline-block; /* Для правильного центрирования */
+}
+
+.transparent {
+    background-color: transparent; /* Прозрачный фон */
+    color: #ffffff;
+    border: 2px solid #ffffff; /* Белая рамка */
+}
+
+.transparent:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Эффект при наведении */
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.games-slider, .reviews-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-btn {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.games-list, .reviews-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.game-card, .rental-card, .review {
+    background-color: #2b2b2b;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    flex: 0 0 300px; /* Фиксированная ширина карточек */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Обеспечивает, что кнопки находятся ниже текста */
+}
+
+.game-info, .equipment-info {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.game-info h3, .equipment-info h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.game-info p, .equipment-info p {
+    margin-bottom: 15px;
+}
+
+.game-card img, .rental-card img, .review img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.rental-list {
+    display: flex;
+    justify-content: center; /* Центровка карточек аренды оборудования */
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    background-color: #2b2b2b;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p, .footer-content a {
+    color: #ffffff;
+}
+
+
+/* Медиазапросы для мобильных устройств */
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .auth-buttons {
+        top: 20px;
+        right: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .game-card, .rental-card, .review {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .games-list, .reviews-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .auth-buttons {
+        top: 15px;
+        right: 5px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .game-card, .rental-card, .review {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
