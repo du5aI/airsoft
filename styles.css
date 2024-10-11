@@ -170,7 +170,6 @@ nav ul li a {
     color: #ffffff;
 }
 
-
 /* Медиазапросы для мобильных устройств */
 
 @media (max-width: 768px) {
@@ -244,4 +243,3 @@ nav ul li a {
         margin: 10px 0;
     }
 }
-
