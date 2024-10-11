@@ -26,12 +26,13 @@
         <div class="hero-content">
             <h1>Присоединяйся к игре</h1>
             <p>Зарегистрируйся на страйкбольную битву прямо сейчас!</p>
-            <a href="#games" class="btn center-button">Регистрация</a>
-        </div>
-        <!-- Кнопки авторизации -->
-        <div class="auth-buttons">
-            <a href="#login" class="btn transparent">Вход</a>
-            <a href="#register" class="btn transparent">Регистрация</a>
+            <div class="auth-buttons">
+                <a href="#login" class="btn transparent">Вход</a>
+                <a href="#games" class="btn transparent">Регистрация</a>
+            </div>
+            <div class="center-button">
+                <a href="#games" class="btn rental-btn">Регистрация</a>
+            </div>
         </div>
     </section>
 
@@ -39,41 +40,73 @@
     <section id="games" class="section">
         <h2>Регистрация на игры</h2>
         <div class="games-slider">
-            <button class="slider-btn" id="games-left-btn">&#9664;</button>
+            <button class="slider-btn left" onclick="moveSlider(-1)">&#9664;</button>
             <div class="games-list">
-                <!-- Карточка игры -->
                 <div class="game-card">
                     <img src="game1.jpg" alt="Полигон лесной">
                     <div class="game-info">
                         <h3>Лесной полигон</h3>
                         <p>Дата: 12 октября, сценарий: Захват флага</p>
-                        <a href="#" class="btn">Участвовать</a>
+                        <a href="#" class="btn rental-btn">Участвовать</a>
                     </div>
                 </div>
-                <!-- Еще карточки полигонов -->
+                <div class="game-card">
+                    <img src="game2.jpg" alt="Полигон городской">
+                    <div class="game-info">
+                        <h3>Городской полигон</h3>
+                        <p>Дата: 19 октября, сценарий: Освобождение заложников</p>
+                        <a href="#" class="btn rental-btn">Участвовать</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="game3.jpg" alt="Полигон пустынный">
+                    <div class="game-info">
+                        <h3>Пустынный полигон</h3>
+                        <p>Дата: 26 октября, сценарий: Конвой</p>
+                        <a href="#" class="btn rental-btn">Участвовать</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="game4.jpg" alt="Полигон снежный">
+                    <div class="game-info">
+                        <h3>Снежный полигон</h3>
+                        <p>Дата: 2 ноября, сценарий: Диверсия</p>
+                        <a href="#" class="btn rental-btn">Участвовать</a>
+                    </div>
+                </div>
             </div>
-            <button class="slider-btn" id="games-right-btn">&#9654;</button>
+            <button class="slider-btn right" onclick="moveSlider(1)">&#9654;</button>
         </div>
     </section>
 
     <!-- Раздел аренды оборудования -->
     <section id="rental" class="section">
         <h2>Аренда оборудования</h2>
-        <div class="rental-slider">
-            <button class="slider-btn" id="rental-left-btn">&#9664;</button>
-            <div class="rental-list">
-                <!-- Карточка оборудования -->
-                <div class="rental-card">
-                    <img src="equipment1.jpg" alt="Автомат">
-                    <div class="equipment-info">
-                        <h3>Автомат АК-47</h3>
-                        <p>Цена: 500 руб/день</p>
-                        <a href="#" class="btn">Арендовать</a>
-                    </div>
+        <div class="rental-list">
+            <div class="rental-card">
+                <img src="equipment1.jpg" alt="Автомат">
+                <div class="equipment-info">
+                    <h3>Автомат АК-47</h3>
+                    <p>Цена: 500 руб/день</p>
+                    <a href="#" class="btn rental-btn">Арендовать</a>
                 </div>
-                <!-- Еще карточки оборудования -->
             </div>
-            <button class="slider-btn" id="rental-right-btn">&#9654;</button>
+            <div class="rental-card">
+                <img src="equipment2.jpg" alt="Пистолет">
+                <div class="equipment-info">
+                    <h3>Пистолет Глок-17</h3>
+                    <p>Цена: 300 руб/день</p>
+                    <a href="#" class="btn rental-btn">Арендовать</a>
+                </div>
+            </div>
+            <div class="rental-card">
+                <img src="equipment3.jpg" alt="Рюкзак">
+                <div class="equipment-info">
+                    <h3>Тактический рюкзак</h3>
+                    <p>Цена: 200 руб/день</p>
+                    <a href="#" class="btn rental-btn">Арендовать</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -81,15 +114,26 @@
     <section id="reviews" class="section">
         <h2>Отзывы участников</h2>
         <div class="reviews-slider">
-            <button class="slider-btn" id="reviews-left-btn">&#9664;</button>
+            <button class="slider-btn left" onclick="moveReviews(-1)">&#9664;</button>
             <div class="reviews-list">
                 <div class="review">
                     <img src="user1.jpg" alt="Отзыв участника">
                     <p>Отличная игра, оборудование на высоте!</p>
                 </div>
-                <!-- Еще отзывы -->
+                <div class="review">
+                    <img src="user2.jpg" alt="Отзыв участника">
+                    <p>Получил массу удовольствия! Буду участвовать снова.</p>
+                </div>
+                <div class="review">
+                    <img src="user3.jpg" alt="Отзыв участника">
+                    <p>Классная атмосфера, профессиональные судьи.</p>
+                </div>
+                <div class="review">
+                    <img src="user4.jpg" alt="Отзыв участника">
+                    <p>Мне понравился сценарий, очень увлекательно!</p>
+                </div>
             </div>
-            <button class="slider-btn" id="reviews-right-btn">&#9654;</button>
+            <button class="slider-btn right" onclick="moveReviews(1)">&#9654;</button>
         </div>
     </section>
 
@@ -101,7 +145,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
